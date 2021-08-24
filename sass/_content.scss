@@ -57,12 +57,16 @@
     flex: 1;
     padding: 3%;
     font-size: 1.2rem;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .text-green{
     color: $color-green;
     font-weight: 600;
+}
+
+h4{
+    font-weight: 100;
 }
 
 .text-red{
@@ -84,11 +88,6 @@
     &__stars{
         border-right: 1px solid rgba(0, 0, 0, .1);
         padding-right: 2rem;
-    }
-
-    &__header{
-
-        //
     }
 
     &__icon{
@@ -117,14 +116,6 @@
     margin-left: 1rem;
 }
 
-.users-ratings-counts{
-
-}
-
-
-.users-likes-counts{
-
-}
 
 
 .all-books{
