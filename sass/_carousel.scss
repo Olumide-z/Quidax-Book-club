@@ -1,0 +1,145 @@
+
+.grid-slider-section{
+    //height: 40vh;
+    padding: 2rem 0;
+}
+
+
+//
+.grid-slide {
+    padding: 1rem;
+    position: relative;
+
+    &__image{
+        height: 100%;
+    }
+
+    &__about{
+        position: absolute;
+        top: 12rem;
+        left: 3rem;
+        opacity: 0;
+        backface-visibility: hidden;
+        letter-spacing: .1rem;
+    }
+
+    &:hover &__about{
+        opacity: 1;
+    }
+
+    &:hover &__image{
+        filter: blur(2px) brightness(70%);
+    }
+}
+
+.grid-slide-inner{
+    height: 35rem;
+    width: 100%;
+    
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .4);
+}
+
+
+.book-details-white {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.ratings__icon-white {
+    fill: #fff;
+}
+
+.year{
+    margin-bottom: .5rem;
+}
+
+.show-btn{
+    box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, .1);
+    width: 4rem;
+    border: none;
+    height: 4rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2rem;
+    cursor: pointer;
+    right: 2rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    @media only screen and (max-width: $bp-largest){
+        display: flex;
+    }
+}
+
+.show-btn-dots{
+ 
+    &,
+    &::before,
+    &::after{
+        content: "";
+        width: .5rem;
+        height: .5rem;
+        background-color: $color-grey-dark-2;
+        border-radius: 30%;
+        display: inline-block;
+    }
+
+    &::before{
+        transform: translateY(-2.3rem);
+    }
+    &::after{
+        transform: translateY(-1.7rem);
+    }
+}
+
+.close-btn{
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 2rem;
+    cursor: pointer;
+    right: 2rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    @media only screen and (max-width: $bp-largest){
+        display: flex;
+    }
+}
+
+.close-btn-icon{
+    height: 2rem;
+}
+
+
+.flickity-button {
+    background: hsla(0,0%,100%,.75);
+    border: none; 
+  }
+  .flickity-button:hover {
+    background: #fff;
+  }
+  
+  .flickity-prev-next-button {
+    width: 30px;
+    height: 95%;
+    border-radius: 1px;
+  }
+  /* icon color */
+  .flickity-button-icon {
+    fill: #333;;
+  }
+  /* position outside */
+  .flickity-prev-next-button.previous {
+    left: 0;
+  }
+  .flickity-prev-next-button.next {
+    right: 0;
+  }

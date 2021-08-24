@@ -1,0 +1,140 @@
+.wrapper {
+    display: flex;
+    padding-top: 10rem;
+}
+
+.content {
+    flex: 1;
+    margin-left: 20%;
+
+    @media only screen and (max-width: $bp-large){
+        margin: 2% 5%;
+    }
+}
+
+
+.recently-added {
+    padding: 3rem;
+}
+
+.heading--2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: .2rem;
+}
+
+.book-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-rows: repeat(2, 15rem);
+    grid-gap: 3rem;
+    margin-top: 3rem;
+}
+
+.books-content{
+    display: flex;
+
+    &:hover{
+        background-color: #fff;
+        box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, .1);
+    }
+}
+
+.image-container{
+    overflow: hidden;
+    flex: 0 0 10rem;
+    height: 15rem;
+    
+
+    &__image{
+        height: 100%;   
+    }
+}
+
+.book-details{
+    flex: 1;
+    padding: 3%;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.text-green{
+    color: $color-green;
+    font-weight: 600;
+}
+
+.text-red{
+    color: $color-red;
+    font-weight: 600;
+}
+
+.heading--3{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.ratings{
+    display: flex;
+    align-items: center;
+
+    &__stars{
+        border-right: 1px solid rgba(0, 0, 0, .1);
+        padding-right: 2rem;
+    }
+
+    &__header{
+
+        //
+    }
+
+    &__icon{
+        height: 1.2rem;
+        width: 1.2rem;
+        
+
+        &--gold{
+            fill: gold; 
+        }
+
+        &--grey{
+            fill: rgba(0, 0, 0, .1);
+        }
+    }
+
+    &__likes{
+        display: flex;
+    }
+}
+
+.users-ratings, 
+.users-likes{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.users-ratings-counts{
+
+}
+
+
+.users-likes-counts{
+
+}
+
+
+.all-books{
+    padding: 3rem;
+}
+
+.all-book-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-rows: repeat(5, 15rem);
+    grid-gap: 3rem;
+    margin-top: 3rem;
+}

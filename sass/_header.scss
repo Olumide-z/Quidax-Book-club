@@ -1,0 +1,250 @@
+.navigation__close{
+    font-size: 3rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navigation__button{
+        background-color: #fff;
+        width: 7rem;
+        height: 7rem;
+        position: relative;
+        display: none;
+
+        @media only screen and (max-width: $bp-large){
+            display: block;
+        }
+}
+
+.navigation__icon{
+
+    border: none;
+    border-radius: 0;
+
+    background-color: #000;
+    height: 3px;
+    width: 3.2rem;
+    position: absolute;
+    top: 2rem;
+    text-align: left;
+  
+
+    &::before,
+    &::after {
+        content: "";
+        width: 2.2rem;
+        background-color: #000;
+        height: 3px;
+        display: inline-block;
+    }
+
+    &::before{
+        transform: translateY(-2rem);
+    }
+
+
+    &::after{
+        transform: translateY(-2rem);
+    }
+
+}
+
+.header{
+   display: flex;
+   justify-content: space-between;
+   align-items: end;
+   padding: 2.5rem;
+   height: 10rem;
+   box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, .1);
+   position: fixed;
+   width: 100%;
+   background-color: #fff;
+   z-index: 200;
+}
+
+.head{
+    position: fixed;
+}
+
+.left{
+    display: flex;
+}
+
+.heading--1{
+    font-weight: 500;
+    margin-left: 1.5rem;
+
+    @media only screen and (max-width: $bp-large){
+        display: none;
+    }
+}
+
+.span{
+    font-size: 1.5rem; 
+    font-weight: 200;
+    color: $color-grey-light-1;
+}
+
+.logo{
+    height: 5rem;
+
+    @media only screen and (max-width: $bp-large){
+        height: 6rem;
+    }
+}
+
+
+.search{
+    flex: 0 0 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @media only screen and (max-width: $bp-small){
+        display: none;
+    }
+
+    &__input{
+        font-family: inherit;
+        font-size: 1.6rem;
+        padding: 1.3rem 2rem;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -4.6rem;
+        border: 1px solid $color-grey-light-1;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+        }
+    }
+
+    &__btn{
+        border: 1px solid $color-grey-light-1;
+        width: 4.6rem;
+        height: 4.6rem;
+    }
+
+    &__icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 12%;
+
+    @media only screen and (max-width: $bp-large){
+        flex: 0 0 15%;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        flex: 0 0 35%;
+    }
+
+    @media only screen and (max-width: $bp-smallest){
+        flex: 0 0 45%;
+    }
+
+    &__search{
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        display: none;
+
+        @media only screen and (max-width: $bp-small){
+            display: block;
+        }
+    }
+
+    &__icon-box{
+        position: relative;
+    }
+
+    &__icon{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    &__notification{
+        font-size: 1.2rem;
+        height: 1.9rem;
+        width: 1.9rem;
+        background-color: $color-green;
+        border-radius: 50%;
+        color: #fff;
+        position: absolute;
+        top: -0.5rem;
+        left: 1.2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    &__picture{
+        width: 5.5rem;
+        height: 5.5rem;
+        display: block;
+        border-radius: 100%;
+    }
+}
+
+.hidden{
+    z-index: 100;
+
+}
+
+.hidden-search{
+    display: block;
+    flex: 0 0 70%;
+}
+
+.hidden-input{
+    width: 80%;
+    &:focus{
+        width: 90%;
+    }
+}
+
+.auto-complete-wrapper{
+    background-color: #fff;
+    box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 4.6rem;
+    width: 90%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.auto-complete-wrapper.active{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.auto-complete-list li {
+    list-style: none;
+    display: none;
+    border-radius: 3px;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color-grey-dark-2;
+        color: #fff;
+    }
+}
+
+.auto-complete-wrapper.active .auto-complete-list li{
+    display: block;
+}

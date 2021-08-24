@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quidax Book Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/quidax-favicon.ico" type="image/x-icon">
+</head>
+<body>
+   
+       <!--HEADER-->
+       <header class="header">
+           <div class="left">
+            <div class="navigation__button">
+                <button class="navigation__icon"></button>
+            </div>
+                <img src="img/logo.png" alt="Logo" class="logo">
+                <h1 class="heading--1">Quidax Book Club<br><span class="span">Admin</span></h1>
+           </div>
+           
+           
+            <form action="#" class="search">
+                <input type="text" placeholder="Search Books, Gernes, Authors, etc." class="search__input">
+                <button class="search__btn">
+                    <svg class="search__icon">
+                            <use xlink:href="img/sprite.svg#loupe"/>
+                        </svg>
+                    </button>
+                    <div class="auto-complete-wrapper">
+                        <div class="auto-complete-list"></div>
+                    </div>
+            </form>
+            
+
+           
+
+           <div class="user">
+               <button class="user__search">
+                    <svg class="user__icon">
+                        <use xlink:href="img/sprite.svg#loupe"/>
+                    </svg>
+                </button>
+
+               <div class="user__icon-box">
+                    <svg class="user__icon">
+                        <use xlink:href="img/sprite.svg#book"/>
+                    </svg>
+               </div>
+                
+               <div class="user__icon-box">
+                    <svg class="user__icon">
+                        <use xlink:href="img/sprite.svg#alarm"/>
+                    </svg>
+                    <span class="user__notification">3</span>
+               </div>
+                
+                <img src="img/profile-pic.jpg" alt="user picture" class="user__picture">
+             
+           </div>
+       </header>
+
+       <!--HIDDEN HEADER-->
+       <header class="header hidden">
+            <button class="navigation__close">&larr;</button>   
+                  
+            <form action="#" class="search hidden-search">
+                <input type="text" placeholder="Search Books, Gernes, Authors, etc." class="search__input hidden-input">
+                <button class="search__btn">
+                    <svg class="search__icon">
+                         <use xlink:href="img/sprite.svg#loupe"/>
+                     </svg>
+                 </button>
+            </form>
+       </header>
+
+       <!--SIDE BAR-->
+       <div class="wrapper">
+            <div class="sidebar">
+                <nav class="sidebar__nav">
+                    <ul class="sidebar__items">
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link">Home</a>
+                        </li>
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link">Profile</a>
+                        </li>
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link">Notification</a>
+                            <span class="sidebar__notification">3</span>
+                        </li>
+                    </ul>
+
+                    <ul class="sidebar__items">
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link sidebar__header">Explore</a>
+                        </li>
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link">Books</a>
+                            <span class="sidebar__numbers">273</span>
+                        </li>
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link">Genres</a>
+                            <span class="sidebar__numbers">42</span>
+                        </li>
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link">Authors</a>
+                            <span class="sidebar__numbers">106</span>
+                        </li>
+                    </ul>
+
+                    <ul class="sidebar__items">
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link sidebar__header">My Books</a>
+                        </li>
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link">Queued</a>
+                            <span class="sidebar__numbers">3</span>
+                        </li>
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link">Currently Borrowed</a>
+                            <span class="sidebar__numbers">0</span>
+                        </li>
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link">Favorite</a>
+                            <span class="sidebar__numbers">19</span>
+                        </li>
+                        <li class="sidebar__list">
+                            <a href="#" class="sidebar__link">History</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            
+                <div class="sidebar hidden-sidebar">
+                    <button class="navigation__close hidden-close">&larr;</button>  
+                    <div class="sidebar-head">
+                        <img src="img/logo.png" alt="Logo" class="logo">
+                        <h1 class="heading--1 sidebar-heading">Quidax Book Club<br><span class="span">Admin</span></h1>
+                    </div>
+
+                    <nav class="sidebar__nav hidden-nav">
+                        <ul class="sidebar__items hidden-items hidden-items">
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link">Home</a>
+                            </li>
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link">Profile</a>
+                            </li>
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link">Notification</a>
+                                <span class="sidebar__notification">3</span>
+                            </li>
+                        </ul>
+    
+                        <ul class="sidebar__items hidden-items">
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link sidebar__header">Explore</a>
+                            </li>
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link">Books</a>
+                                <span class="sidebar__numbers">273</span>
+                            </li>
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link">Genres</a>
+                                <span class="sidebar__numbers">42</span>
+                            </li>
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link">Authors</a>
+                                <span class="sidebar__numbers">106</span>
+                            </li>
+                        </ul>
+    
+                        <ul class="sidebar__items hidden-items">
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link sidebar__header">My Books</a>
+                            </li>
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link">Queued</a>
+                                <span class="sidebar__numbers">3</span>
+                            </li>
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link">Currently Borrowed</a>
+                                <span class="sidebar__numbers">0</span>
+                            </li>
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link">Favorite</a>
+                                <span class="sidebar__numbers">19</span>
+                            </li>
+                            <li class="sidebar__list">
+                                <a href="#" class="sidebar__link">History</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    </div>
+            
+            <!--CONTENT-->
+            <div class="content">
+                <!--CAROUSEL-->
+                <div class="carousel">
+                    <h2 class="heading--2">carousel</h2>
+
+                    <div class="grid-slider-section">
+                        <div class="grid-slider-wrap">
+                            <div class="grid-slide">
+                                <button class="show-btn">
+                                    <div class="show-btn-dots">    
+                                    </div>
+                                </button>
+
+                                <button class="close-btn">
+                                    <svg class="close-btn-icon">
+                                        <use xlink:href="img/sprite.svg#close-button"/>
+                                    </svg>
+                                </button>
+
+                                <div class="grid-slide-inner">
+                                    <img src="img/book 1.jpg" alt="" class="grid-slide__image">
+                                </div>
+                                <figcaption class="grid-slide__about">
+                                    <div class="book-details">
+                                        <span class="text-green">Avaliable</span>
+                                        <div class="book-details-white">
+                                        <h3 class="heading--3">The Effect Engineer</h3>
+                                        <h4>Edmond Lau</h4>
+                                        <h4 class="year">2009</h4>
+                                        <h4>Genre: Motivational</h4>
+                                        <h4>Labels: Creative, Self-help</h4>
+                                        <div class="ratings">
+                                    
+                                            <div class="ratings__stars">
+                                                <div>
+                                                <h4 class="ratings__header">Ratings: 4.0</h4>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--grey">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                </div>
+        
+                                            
+                                            </div>
+        
+                                            <div class="ratings__likes">
+                                                <div class="users-ratings">
+                                                    <svg class="ratings__icon ratings__icon-white">
+                                                        <use xlink:href="img/sprite.svg#users"/>
+                                                    </svg>
+                                                    <span class="users-ratings-counts">31</span>
+                                                </div>
+                                                <div class="users-likes">
+                                                    <svg class="ratings__icon ratings__icon-white">
+                                                        <use xlink:href="img/sprite.svg#heart"/>
+                                                    </svg>
+                                                    <span class="users-likes-counts">29</span>
+                                                </div>        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </figcaption>
+                                
+                            </div>
+
+                            <div class="grid-slide">
+                                <button class="show-btn">
+                                    <div class="show-btn-dots">    
+                                    </div>
+                                </button>
+
+                                <button class="close-btn">
+                                    <svg class="close-btn-icon">
+                                        <use xlink:href="img/sprite.svg#close-button"/>
+                                    </svg>
+                                </button>
+                                <div class="grid-slide-inner">
+                                    <img src="img/book 2.jpg" alt="" class="grid-slide__image">
+                                </div>
+                                <figcaption class="grid-slide__about">
+                                    <div class="book-details">
+                                        <span class="text-red">Borrowed out</span>
+                                        <div class="book-details-white">
+                                        <h3 class="heading--3">Built To Last</h3>
+                                        <h4>Jim Collins, Jerry I. Porrass</h4>
+                                        <h4 class="year">2001</h4>
+                                        <h4>Genre: Business, Entrepreneurship</h4>
+                                        <h4>Labels: Creative, Self-help</h4>
+                                        <div class="ratings">
+                                    
+                                            <div class="ratings__stars">
+                                                <div>
+                                                <h4 class="ratings__header">Ratings: 4.0</h4>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--grey">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                </div>
+        
+                                            
+                                            </div>
+        
+                                            <div class="ratings__likes">
+                                                <div class="users-ratings">
+                                                    <svg class="ratings__icon ratings__icon-white">
+                                                        <use xlink:href="img/sprite.svg#users"/>
+                                                    </svg>
+                                                    <span class="users-ratings-counts">31</span>
+                                                </div>
+                                                <div class="users-likes">
+                                                    <svg class="ratings__icon ratings__icon-white">
+                                                        <use xlink:href="img/sprite.svg#heart"/>
+                                                    </svg>
+                                                    <span class="users-likes-counts">29</span>
+                                                </div>        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </figcaption>
+                            </div>
+
+
+                            <div class="grid-slide">
+                                <button class="show-btn">
+                                    <div class="show-btn-dots">    
+                                    </div>
+                                </button>
+
+                                <button class="close-btn">
+                                    <svg class="close-btn-icon">
+                                        <use xlink:href="img/sprite.svg#close-button"/>
+                                    </svg>
+                                </button>
+                                <div class="grid-slide-inner">
+                                    <img src="img/book 3.jpg" alt="" class="grid-slide__image">
+                                </div>
+                                <figcaption class="grid-slide__about">
+                                    <div class="book-details">
+                                        <span class="text-green">Avaliable</span>
+                                        <div class="book-details-white">
+                                        <h3 class="heading--3">The Lean startuo</h3>
+                                        <h4>Eric Reis</h4>
+                                        <h4 class="year">2005</h4>
+                                        <h4>Genre: Motivational</h4>
+                                        <h4>Labels: Creative, Self-help</h4>
+                                        <div class="ratings">
+                                    
+                                            <div class="ratings__stars">
+                                                <div>
+                                                <h4 class="ratings__header">Ratings: 4.0</h4>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--grey">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                </div>
+        
+                                            
+                                            </div>
+        
+                                            <div class="ratings__likes">
+                                                <div class="users-ratings">
+                                                    <svg class="ratings__icon ratings__icon-white">
+                                                        <use xlink:href="img/sprite.svg#users"/>
+                                                    </svg>
+                                                    <span class="users-ratings-counts">31</span>
+                                                </div>
+                                                <div class="users-likes">
+                                                    <svg class="ratings__icon ratings__icon-white">
+                                                        <use xlink:href="img/sprite.svg#heart"/>
+                                                    </svg>
+                                                    <span class="users-likes-counts">29</span>
+                                                </div>        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </figcaption>
+                            </div>
+
+
+                            <div class="grid-slide">
+                                <button class="show-btn">
+                                    <div class="show-btn-dots">    
+                                    </div>
+                                </button>
+
+                                <button class="close-btn">
+                                    <svg class="close-btn-icon">
+                                        <use xlink:href="img/sprite.svg#close-button"/>
+                                    </svg>
+                                </button>
+                                <div class="grid-slide-inner">
+                                    <img src="img/book 4.jpg" alt="" class="grid-slide__image">
+                                </div>
+                                <figcaption class="grid-slide__about">
+                                    <div class="book-details">
+                                        <span class="text-green">Avaliable</span>
+                                        <div class="book-details-white">
+                                        <h3 class="heading--3">Effective python</h3>
+                                        <h4>Diomidis Spinellis</h4>
+                                        <h4>Genre: Motivational</h4>
+                                        <h4>Labels: Creative, Self-help</h4>
+                                        <div class="ratings">
+                                    
+                                            <div class="ratings__stars">
+                                                <div>
+                                                <h4 class="ratings__header">Ratings: 4.0</h4>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--grey">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                </div>
+        
+                                            
+                                            </div>
+        
+                                            <div class="ratings__likes">
+                                                <div class="users-ratings">
+                                                    <svg class="ratings__icon ratings__icon-white">
+                                                        <use xlink:href="img/sprite.svg#users"/>
+                                                    </svg>
+                                                    <span class="users-ratings-counts">31</span>
+                                                </div>
+                                                <div class="users-likes">
+                                                    <svg class="ratings__icon ratings__icon-white">
+                                                        <use xlink:href="img/sprite.svg#heart"/>
+                                                    </svg>
+                                                    <span class="users-likes-counts">29</span>
+                                                </div>        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </figcaption>
+                            </div>
+
+
+                            <div class="grid-slide">
+                                <button class="show-btn">
+                                    <div class="show-btn-dots">    
+                                    </div>
+                                </button>
+
+                                <button class="close-btn">
+                                    <svg class="close-btn-icon">
+                                        <use xlink:href="img/sprite.svg#close-button"/>
+                                    </svg>
+                                </button>
+                                <div class="grid-slide-inner">
+                                    <img src="img/book 5.jpg" alt="" class="grid-slide__image">
+                                </div>
+                                <figcaption class="grid-slide__about">
+                                    <div class="book-details">
+                                        <span class="text-green">Avaliable</span>
+                                        <div class="book-details-white">
+                                        <h3 class="heading--3">Big magic</h3>
+                                        <h4>Elizabeth Gilberth</h4>
+                                        <h4 class="year">2014</h4>
+                                        <h4>Genre: Motivational</h4>
+                                        <h4>Labels: Creative, Self-help</h4>
+                                        <div class="ratings">
+                                    
+                                            <div class="ratings__stars">
+                                                <div>
+                                                <h4 class="ratings__header">Ratings: 4.0</h4>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--gold">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                <svg class="ratings__icon ratings__icon--grey">
+                                                    <use xlink:href="img/sprite.svg#star"/>
+                                                </svg>
+                                                </div>
+        
+                                            
+                                            </div>
+        
+                                            <div class="ratings__likes">
+                                                <div class="users-ratings">
+                                                    <svg class="ratings__icon ratings__icon-white">
+                                                        <use xlink:href="img/sprite.svg#users"/>
+                                                    </svg>
+                                                    <span class="users-ratings-counts">31</span>
+                                                </div>
+                                                <div class="users-likes">
+                                                    <svg class="ratings__icon ratings__icon-white">
+                                                        <use xlink:href="img/sprite.svg#heart"/>
+                                                    </svg>
+                                                    <span class="users-likes-counts">29</span>
+                                                </div>        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </figcaption>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <!--RECENTLY ADDED BOOKS-->
+                <div class="recently-added">
+                    <h2 class="heading--2">recently added</h2>
+                    <div class="book-container">
+                        <!--BOOK1-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 1.jpg" alt="book1" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">The Effect Engineer</h3>
+                                <h4>Edmond Lau - 2009</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <!--BOOK 2-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 2.jpg" alt="book2" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-red">Borrowed Out</span>
+                                <h3 class="heading--3">Built to last</h3>
+                                <h4>Jim Collins, Jerry I. Porras - 2001</h4>
+                                <h4>Business, Entrepreneurship</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--BOOK 3-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 3.jpg" alt="book3" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">The lean startup</h3>
+                                <h4>Eric Reis - 2005</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--BOOK 4-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 4.jpg" alt="book4" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">Effective python</h3>
+                                <h4>Diomidis Spinellis</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--BOOK 5-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 5.jpg" alt="book4" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">Big magic</h3>
+                                <h4>Elizabeth Gilberth - 2014</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--ALL BOOKS-->
+                <div class="all-books">
+                    <h2 class="heading--2">All books</h2>
+                    <div class="all-book-container">
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 1.jpg" alt="book1" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">The Effect Engineer</h3>
+                                <h4>Edmond Lau - 2009</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 2-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 2.jpg" alt="book2" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-red">Borrowed Out</span>
+                                <h3 class="heading--3">Built to last</h3>
+                                <h4>Jim Collins, Jerry I. Porras - 2001</h4>
+                                <h4>Business, Entrepreneurship</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 3-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 3.jpg" alt="book3" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">The lean startup</h3>
+                                <h4>Eric Reis - 2005</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 4-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 4.jpg" alt="book4" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">Effective python</h3>
+                                <h4>Diomidis Spinellis</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 5-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 5.jpg" alt="book4" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">Big magic</h3>
+                                <h4>Elizabeth Gilberth - 2014</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 6-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 2.jpg" alt="book2" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-red">Borrowed Out</span>
+                                <h3 class="heading--3">Built to last</h3>
+                                <h4>Jim Collins, Jerry I. Porras - 2001</h4>
+                                <h4>Business, Entrepreneurship</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 7-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 3.jpg" alt="book3" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">The lean startup</h3>
+                                <h4>Eric Reis - 2005</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 8-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 1.jpg" alt="book1" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">The Effect Engineer</h3>
+                                <h4>Edmond Lau - 2009</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 9-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 4.jpg" alt="book4" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">Effective python</h3>
+                                <h4>Diomidis Spinellis</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 10-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 5.jpg" alt="book4" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">Big magic</h3>
+                                <h4>Elizabeth Gilberth - 2014</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 11-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 3.jpg" alt="book3" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">The lean startup</h3>
+                                <h4>Eric Reis - 2005</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 12-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 2.jpg" alt="book2" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-red">Borrowed Out</span>
+                                <h3 class="heading--3">Built to last</h3>
+                                <h4>Jim Collins, Jerry I. Porras - 2001</h4>
+                                <h4>Business, Entrepreneurship</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--BOOK 13-->
+                        <div class="books-content">
+                            <div class="image-container"><img src="img/book 1.jpg" alt="book1" class="image-container__image"></div>
+                            <div class="book-details">
+                                <span class="text-green">Avaliable</span>
+                                <h3 class="heading--3">The Effect Engineer</h3>
+                                <h4>Edmond Lau - 2009</h4>
+                                <h4>Motivational</h4>
+                                <div class="ratings">
+                                    
+                                    <div class="ratings__stars">
+                                        <div>
+                                        <h4 class="ratings__header">Ratings: 4.0</h4>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--gold">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        <svg class="ratings__icon ratings__icon--grey">
+                                            <use xlink:href="img/sprite.svg#star"/>
+                                        </svg>
+                                        </div>
+
+                                    
+                                    </div>
+
+                                    <div class="ratings__likes">
+                                        <div class="users-ratings">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#users"/>
+                                            </svg>
+                                            <span class="users-ratings-counts">31</span>
+                                        </div>
+                                        <div class="users-likes">
+                                            <svg class="ratings__icon">
+                                                <use xlink:href="img/sprite.svg#heart"/>
+                                            </svg>
+                                            <span class="users-likes-counts">29</span>
+                                        </div>        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+
+</body>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="script.js"></script>
+</html>
+
+<!--<svg class="icon">
+        
+<use xlink:href="img/sprite.svg#alarm"/>
+    </svg>-->
